@@ -5,42 +5,53 @@ import views.ShowConsole;
 public class MetodosBusqueda {
     private ShowConsole showConsole;
     private int[] array;
-    
-    
 
-    public MetodosBusqueda() {
-    }
-
-
-
-    public MetodosBusqueda(ShowConsole showConsole, int[] array) {
-        this.array = new int[]{10,11,-2,5,6,8,15,22};
+    public MetodosBusqueda(ShowConsole showConsole) {
+        this.array = new int[] { 10, 11, -2, 5, 6, 8, 15, 22 };
         this.showConsole = showConsole;
         showConsole.printArray(this.array);
 
-        int result1= busquedaLineal(this.array,5);
-        showConsole.printResult(result1,5);
+        int result1 = busquedaLineal(5);
+        showConsole.printResult(result1, 5);
+        int result2 = busquedaLinealWhile(-2);
+        showConsole.printResult(result2, -2);
+        int result3 = busquedaLinealWhile(20);
+        showConsole.printResult(result3, 20);
+        Integer result4 = busquedaLinealobj(10);
+        showConsole.printResult(result4, 10);
+
     }
 
-
-
-    public int busquedaLineal(int[] array, int value){
+    public int busquedaLineal(int value) {
         for (int i = 0; i < array.length; i++) {
-            if (array[i]==value) {
+            if (array[i] == value) {
                 return i;
             }
         }
         return -1;
     }
-    public int busquedaLinealWhile(int[] array, int value){
-        int i=-1;
-        while (value!=array[i]) {
-            if (array[i]==value) {
+
+    public int busquedaLinealWhile(int value) {
+        int i = 0;
+        while (i < array.length) {
+            if (array[i] == value) {
                 return i;
             }
             i++;
         }
         return -1;
+    }
+
+    public Integer busquedaLinealobj(int value) {
+        int i = 0;
+        while (i < array.length) {
+            if (array[i] == value) {
+                return i;
+            }
+            i++;
+        }
+        return -1;
+
     }
 
 }
