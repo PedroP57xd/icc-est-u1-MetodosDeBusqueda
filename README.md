@@ -7,4 +7,4 @@
 ### Busqueda Lineal
 
     1. Metodo de Busqueda Lineas
-![Ejercicio 1](image.png)
+![Ejercicio 1](Assets/BusquedaLineal.png)
