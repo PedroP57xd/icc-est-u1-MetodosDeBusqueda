@@ -35,9 +35,9 @@ public class ShowConsole {
     }
     public void showPersonResult(Persona resPer,int acii, boolean valorNombre){
         if (valorNombre) {
-            System.out.println("     La persona que la suma de el valor Acii de su nombre es igua al 498 es: " + resPer);
+            System.out.println("     La persona que la suma de el valor Acii de su nombre es igua al 498 es: " + resPer+"\n");
         }else {
-            System.out.println("     No hay nombres que la suma Ascii de sus letras de 498");
+            System.out.println("     No hay nombres que la suma Ascii de sus letras de 498\n");
         }
     }
 }
